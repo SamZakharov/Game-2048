@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2048</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex items-center justify-center min-h-[100vh]">
+<div class="score-board mb-4 text-center mr-5">
+    <div class="current-score inline-block bg-orange-400 text-white px-4 py-2 rounded mr-4">
+        Score: <span id="current-score">0</span>
+    </div>
+    <div class="best-score inline-block bg-orange-600 text-white px-4 py-2 rounded">
+        Best: <span id="best-score">0</span>
+    </div>
+</div>
+<main id="game-field" class="grid grid-cols-4 grid-rows-4 bg-orange-200 min-h-[400px] min-w-[400px] gap-1 border-4 border-orange-200"></main>
+
+<div id="game-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg text-center">
+        <h2 id="game-result" class="text-2xl font-bold mb-4">Game Over!</h2>
+        <p id="final-score" class="text-xl mb-6">
+            Your score: <span id="score-value">0</span><br>
+            Best score: <span id="best-score-value">0</span>
+        </p>
+        <button id="restart-button" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
+            Play Again
+        </button>
+    </div>
+</div>
+<script type="module" src="./js/board.js"></script>
+<script type="module" src="./js/game.js"></script>
+<script type="module" src="./js/input.js"></script>
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>
