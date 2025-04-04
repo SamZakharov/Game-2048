@@ -10,10 +10,11 @@ class Game {
             this.bestScore = 0;
         }
         this.achievements = {
-            256: "Отличный результат! Вы достигли 256!",
-            512: "Потрясающе! Вы собрали 512!",
-            1024: "Невероятно! Цель 1024 достигнута!",
-            2048: "Вы мастер 2048! Поздравляем с победой!"
+            256: "Great result! You have reached 256!",
+            512: "Amazing! You've collected 512!",
+            1024: "Incredible! Goal 1024 reached!",
+            2048: "You are the master of 2048! \n" +
+                "Surprise me if you can!"
         };
         this.maxAchievementShown = 0;
     }
